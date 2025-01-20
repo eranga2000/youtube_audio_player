@@ -8,7 +8,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 }
 
 class YouTubeAudioPlayer extends StatefulWidget {
-  const YouTubeAudioPlayer({Key? key}) : super(key: key);
+  const YouTubeAudioPlayer({super.key});
 
   @override
   State<YouTubeAudioPlayer> createState() => _YouTubeAudioPlayerState();
@@ -80,7 +80,7 @@ class _YouTubeAudioPlayerState extends State<YouTubeAudioPlayer> {
 
       setState(() {
         _audioUrl = audioStream.url.toString();
-        _thumbnailUrl = thumbnailUrl?.toString();
+        _thumbnailUrl = thumbnailUrl.toString();
         _videoTitle = video.title;
       });
 
